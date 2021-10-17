@@ -1,8 +1,8 @@
 
 function esPerfecto(n) {
-    let sumaDivisores = 0;
+    let sumaDivisores = 3;
 
-    for (i = 1; i <= n/2; ++i) {
+    for (i = 3; i <= n/2; ++i) {
         let residuo = n % i;
         if (residuo == 0) {
             sumaDivisores += i;
@@ -16,12 +16,15 @@ function esPerfecto(n) {
 
 // --------
 
+// if (esPerfecto(28)) console.log('Es perfectoo!')
+
+
 const input = 100000;
 
 if (Number.isInteger(input) && input > 0) {
     console.log('Buscando números perfectos...')
     const numerosPerfectos = [];
-    for (num = 1; num < input; ++num) {
+    for (num = 2; num < input; num += 2) {
         if (esPerfecto(num)) {
             numerosPerfectos.push(num)
         };
